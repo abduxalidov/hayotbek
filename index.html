@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdurafiqov Hayotjon – Matematika va Fizika Ustozi</title>
+<meta name="description" content="Matematika va fizika fanlari bo'yicha professional ustoz. Ilmiy yondashuv, sertifikatli tayyorlov, isbotlangan natijalar.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --primary: #1565C0;
+    --primary-dark: #0D47A1;
+    --primary-light: #42A5F5;
+    --primary-faded: #E3F2FD;
+    --accent: #0288D1;
+    --white: #FFFFFF;
+    --background: #F8FAFE;
+    --card: #FFFFFF;
+    --text: #1A1A2E;
+    --text-secondary: #5A6178;
+    --text-muted: #8E95A9;
+    --border: #E8ECF4;
+    --border-light: #F0F3F9;
+    --success: #2E7D32;
+    --success-light: #E8F5E9;
+    --gold: #F57F17;
+    --gold-light: #FFF8E1;
+    --grade-aplus: #1B5E20;
+    --grade-a: #2E7D32;
+    --grade-bplus: #1565C0;
+    --grade-b: #0288D1;
+    --shadow: rgba(21, 101, 192, 0.08);
+    --shadow-dark: rgba(0, 0, 0, 0.12);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0D47A1, #1565C0, #1976D2);
+    padding: 70px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.06);
+    top: -80px; right: -60px;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.06);
+    bottom: -40px; left: -40px;
+  }
+  .hero .circle3 {
+    position: absolute;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+    top: 40px; left: 20px;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .photo-ring {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.4);
+    padding: 4px;
+    background: rgba(255,255,255,0.1);
+    margin: 0 auto 20px;
+    display: inline-block;
+  }
+  .photo-ring img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero h1 {
+    font-size: 24px; font-weight: 800;
+    color: #fff; letter-spacing: -0.3px;
+  }
+  .hero .title-sub {
+    font-size: 14px; color: rgba(255,255,255,0.85);
+    margin-top: 8px; line-height: 20px;
+    max-width: 300px; margin-left: auto; margin-right: auto;
+  }
+  .badge-row {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px; margin-top: 16px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.15);
+    padding: 5px 12px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; font-size: 12px; font-weight: 600;
+  }
+  .hero-buttons {
+    display: flex; gap: 12px; margin-top: 24px;
+    justify-content: center; flex-wrap: wrap;
+  }
+  .btn-primary-hero {
+    background: #fff; color: var(--primary-dark);
+    padding: 14px 24px; border-radius: 12px;
+    font-weight: 700; font-size: 15px;
+    border: none; cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+    transition: opacity 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .btn-primary-hero:hover { opacity: 0.9; transform: scale(0.98); }
+  .btn-secondary-hero {
+    background: rgba(255,255,255,0.18); color: #fff;
+    padding: 14px 24px; border-radius: 12px;
+    font-weight: 600; font-size: 15px;
+    border: 1px solid rgba(255,255,255,0.3); cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+    transition: opacity 0.2s, transform 0.2s;
+    text-decoration: none;
+  }
+  .btn-secondary-hero:hover { opacity: 0.9; transform: scale(0.98); }
+
+  /* SECTION */
+  .section { padding: 32px 16px 0; }
+  .section-header { margin-bottom: 20px; padding-left: 16px; }
+  .section-header .accent-bar {
+    width: 40px; height: 4px;
+    background: var(--primary); border-radius: 2px;
+    margin-bottom: 12px;
+  }
+  .section-header h2 {
+    font-size: 22px; font-weight: 700;
+    color: var(--text); letter-spacing: -0.3px;
+  }
+  .section-header p {
+    font-size: 14px; color: var(--text-secondary); margin-top: 4px;
+  }
+
+  /* CARD */
+  .card {
+    background: var(--card); border-radius: 16px;
+    border: 1px solid var(--border);
+    margin-bottom: 12px; overflow: hidden;
+  }
+  .card-padded { padding: 20px; }
+
+  /* BIOGRAPHY */
+  .bio-icons { display: flex; gap: 10px; margin-bottom: 16px; }
+  .icon-circle {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--primary-faded);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .icon-circle svg { width: 20px; height: 20px; color: var(--primary); }
+  .short-bio { font-size: 15px; color: var(--text-secondary); line-height: 24px; }
+  .full-bio {
+    font-size: 15px; color: var(--text); line-height: 26px;
+    white-space: pre-line;
+  }
+  .full-bio-container { margin-top: 8px; display: none; }
+  .full-bio-container.active { display: block; }
+  .divider { height: 1px; background: var(--border-light); margin: 12px 0; }
+  .expand-btn {
+    display: flex; align-items: center; gap: 4px;
+    margin-top: 16px; background: none; border: none;
+    cursor: pointer; font-size: 14px; font-weight: 600;
+    color: var(--primary); padding: 0;
+  }
+  .expand-btn:hover { opacity: 0.7; }
+  .expand-btn .arrow { transition: transform 0.3s; display: inline-block; }
+  .expand-btn .arrow.rotated { transform: rotate(180deg); }
+
+  /* STATISTICS */
+  .stat-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px; cursor: pointer; user-select: none;
+  }
+  .stat-header:hover { opacity: 0.8; }
+  .stat-header-left { display: flex; align-items: center; gap: 12px; }
+  .stat-emoji { font-size: 28px; }
+  .stat-name { font-size: 17px; font-weight: 700; color: var(--text); }
+  .stat-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+  .stat-expanded {
+    padding: 0 18px 20px; border-top: 1px solid var(--border-light);
+    padding-top: 16px; display: none;
+  }
+  .stat-expanded.active { display: block; }
+  .total-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 16px; background: var(--primary-faded);
+    padding: 10px; border-radius: 10px;
+  }
+  .total-text { font-size: 14px; font-weight: 600; color: var(--primary-dark); }
+  .grade-row {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+  }
+  .grade-label {
+    width: 36px; padding: 4px 0; border-radius: 6px;
+    text-align: center; color: #fff; font-size: 12px; font-weight: 700;
+  }
+  .bar-track {
+    height: 8px; background: var(--border-light);
+    border-radius: 4px; overflow: hidden; flex: 1;
+  }
+  .bar-fill {
+    height: 100%; border-radius: 4px;
+    width: 0; transition: width 0.8s ease-out;
+  }
+  .grade-count {
+    font-size: 14px; font-weight: 600; color: var(--text);
+    width: 30px; text-align: right;
+  }
+
+  /* COURSES */
+  .course-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .course-emoji { font-size: 32px; }
+  .course-title { font-size: 18px; font-weight: 700; color: var(--text); }
+  .feature-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 10px; padding-left: 4px;
+  }
+  .feature-text { font-size: 14px; color: var(--text-secondary); line-height: 20px; }
+  .enroll-btn {
+    background: var(--primary); border-radius: 12px;
+    padding: 14px; display: flex; align-items: center;
+    justify-content: center; gap: 8px; margin-top: 8px;
+    color: #fff; font-weight: 700; font-size: 15px;
+    border: none; cursor: pointer; width: 100%;
+    text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+  }
+  .enroll-btn:hover { opacity: 0.85; transform: scale(0.98); }
+
+  /* ARTICLES */
+  .article-top {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .number-badge {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--primary-faded);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: var(--primary);
+  }
+  .article-title {
+    font-size: 14px; color: var(--text); line-height: 22px; font-weight: 500;
+  }
+  .link-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 12px; background: var(--primary-faded);
+    padding: 8px 14px; border-radius: 8px;
+    font-size: 13px; font-weight: 600; color: var(--primary);
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .link-btn:hover { opacity: 0.7; }
+  .show-more-btn {
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; padding: 12px; cursor: pointer;
+    background: none; border: none; width: 100%;
+    font-size: 14px; font-weight: 600; color: var(--primary);
+  }
+  .show-more-btn:hover { opacity: 0.7; }
+
+  /* BOOKS */
+  .book-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px;
+  }
+  .book-item:not(:last-child) { border-bottom: 1px solid var(--border-light); }
+  .book-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--primary-faded);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .book-title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 20px; }
+  .books-expand-btn {
+    display: flex; align-items: center; justify-content: center;
+    gap: 4px; padding: 12px; border-top: 1px solid var(--border-light);
+    cursor: pointer; background: none; border-left: 0; border-right: 0; border-bottom: 0;
+    width: 100%; font-size: 13px; font-weight: 600; color: var(--primary);
+  }
+  .books-expand-btn:hover { opacity: 0.7; }
+
+  /* PHYSICS BOOKS */
+  .phys-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px; cursor: pointer;
+  }
+  .phys-header:hover { opacity: 0.8; }
+  .phys-header-left { display: flex; align-items: center; gap: 12px; flex: 1; }
+  .phys-icon-wrap {
+    width: 42px; height: 42px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .phys-icon-calc { background: #FFF3E0; }
+  .phys-icon-book { background: var(--primary-faded); }
+  .phys-header-text {
+    display: flex; align-items: center; gap: 6px; flex: 1;
+  }
+  .phys-cat-emoji { font-size: 18px; }
+  .phys-cat-title { font-size: 15px; font-weight: 700; color: var(--text); }
+  .phys-books-list { padding: 0 16px 16px; display: none; }
+  .phys-books-list.active { display: block; }
+  .phys-book-item {
+    display: flex; padding: 12px 0; gap: 12px;
+  }
+  .phys-book-item:not(:last-child) { border-bottom: 1px solid var(--border-light); }
+  .phys-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--primary); margin-top: 6px; flex-shrink: 0;
+  }
+  .phys-book-title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 20px; }
+  .phys-book-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 18px; }
+  .part-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 6px; padding-left: 8px;
+  }
+  .part-bullet {
+    width: 5px; height: 5px; border-radius: 50%; background: var(--text-muted); flex-shrink: 0;
+  }
+  .part-text { font-size: 13px; color: var(--text-secondary); line-height: 18px; }
+
+  /* CERTIFICATES */
+  .cert-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px; cursor: pointer;
+  }
+  .cert-header:hover { opacity: 0.8; }
+  .cert-header-left { display: flex; align-items: center; gap: 12px; }
+  .cert-emoji { font-size: 28px; }
+  .cert-group-title { font-size: 16px; font-weight: 700; color: var(--text); }
+  .cert-group-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+  .cert-grades { padding: 0 16px 16px; display: none; }
+  .cert-grades.active { display: block; }
+  .cert-grade-card {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--background); padding: 14px; border-radius: 12px;
+    margin-bottom: 8px;
+  }
+  .cert-grade-left { display: flex; align-items: center; gap: 12px; }
+  .cert-grade-badge {
+    width: 36px; height: 36px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cert-grade-row { display: flex; align-items: center; gap: 4px; }
+  .cert-grade-label-text { font-size: 13px; color: var(--text-secondary); }
+  .inline-tag {
+    padding: 2px 8px; border-radius: 4px;
+    font-size: 12px; font-weight: 700; color: #fff;
+  }
+  .cert-grade-count { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  .photos-section {
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+  }
+  .photos-title {
+    font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px;
+  }
+  .photo-card {
+    background: var(--background); border-radius: 12px;
+    overflow: hidden; border: 1px solid var(--border-light);
+    margin-bottom: 10px;
+  }
+  .cert-image { width: 100%; height: 280px; object-fit: cover; display: block; background: #f0f0f0; }
+  .photo-info { padding: 12px; }
+  .cert-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .cert-meta { display: flex; align-items: center; gap: 8px; }
+  .grade-tag {
+    padding: 3px 10px; border-radius: 6px;
+    font-size: 12px; font-weight: 700; color: #fff;
+  }
+  .cert-score { font-size: 12px; color: var(--text-muted); }
+  .show-more-photos {
+    text-align: center; padding: 12px; margin-top: 8px;
+    background: var(--primary-faded); border-radius: 10px;
+    cursor: pointer; font-size: 13px; font-weight: 600;
+    color: var(--primary); border: none; width: 100%;
+  }
+  .show-more-photos:hover { opacity: 0.7; }
+
+  .telegram-cta {
+    margin-top: 16px; background: var(--card);
+    border-radius: 16px; padding: 20px;
+    border: 1px solid var(--border); text-align: center;
+  }
+  .telegram-cta-text {
+    font-size: 14px; color: var(--text-secondary);
+    line-height: 22px; margin-bottom: 14px;
+  }
+  .telegram-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #0088CC; padding: 12px 24px; border-radius: 12px;
+    color: #fff; font-weight: 700; font-size: 14px;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .telegram-cta-btn:hover { opacity: 0.85; transform: scale(0.98); }
+
+  /* TELEGRAM SECTION */
+  .telegram-card {
+    background: var(--card); border-radius: 16px; padding: 24px;
+    text-align: center; border: 1px solid var(--border);
+  }
+  .tg-icon-bg {
+    width: 56px; height: 56px; border-radius: 16px;
+    background: #0088CC; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 16px;
+  }
+  .tg-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .tg-channel { font-size: 14px; color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+  .tg-desc {
+    font-size: 13px; color: var(--text-muted); line-height: 20px;
+    margin-bottom: 20px; max-width: 280px; margin-left: auto; margin-right: auto;
+  }
+  .tg-btn {
+    background: #0088CC; border-radius: 12px; padding: 14px 24px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; width: 100%; color: #fff; font-weight: 700;
+    font-size: 15px; text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .tg-btn:hover { opacity: 0.85; transform: scale(0.98); }
+
+  /* CONTACT */
+  .contact-section {
+    padding: 32px 16px 0;
+  }
+  .contact-gradient {
+    background: linear-gradient(135deg, #0D47A1, #1565C0, #1976D2);
+    border-radius: 20px; padding: 24px; overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .contact-title { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+  .contact-subtitle { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 22px; margin-bottom: 24px; }
+  .contact-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .contact-item {
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(255,255,255,0.12); padding: 14px;
+    border-radius: 12px; border: 1px solid rgba(255,255,255,0.15);
+    text-decoration: none; color: #fff; font-size: 15px; font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .contact-item:hover { opacity: 0.8; }
+  .contact-icon-box {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: #fff; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0;
+  }
+  .contact-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-contact-primary {
+    background: #fff; color: var(--primary-dark);
+    padding: 14px 24px; border-radius: 12px;
+    font-weight: 700; font-size: 15px;
+    display: flex; align-items: center; gap: 8px;
+    flex: 1; justify-content: center; min-width: 140px;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn-contact-primary:hover { opacity: 0.85; transform: scale(0.98); }
+  .btn-contact-secondary {
+    background: rgba(255,255,255,0.18); color: #fff;
+    padding: 14px 24px; border-radius: 12px;
+    font-weight: 600; font-size: 15px;
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(255,255,255,0.3);
+    flex: 1; justify-content: center; min-width: 140px;
+    text-decoration: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn-contact-secondary:hover { opacity: 0.85; transform: scale(0.98); }
+
+  /* FOOTER */
+  .footer { padding: 28px 24px 40px; text-align: center; }
+  .footer-divider {
+    width: 40px; height: 3px; background: var(--border);
+    border-radius: 2px; margin: 0 auto 16px;
+  }
+  .footer-copyright { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+  .footer-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+  /* SVG ICONS INLINE */
+  .icon-sm { width: 16px; height: 16px; }
+  .icon-md { width: 18px; height: 18px; }
+  .icon-lg { width: 20px; height: 20px; }
+  .icon-xl { width: 24px; height: 24px; }
+
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+<div class="circle3"></div>
+<div class="hero-content">
+  <div class="photo-ring">
+    <img src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/rcas434c9t90lmnxm6do4" alt="Abdurafiqov Hayotjon">
+  </div>
+  <h1>Abdurafiqov Hayotjon Hislatjon o'g'li</h1>
+  <p class="title-sub">Matematika va fizika fanlari bo'yicha professional ustoz</p>
+  <div class="badge-row">
+    <span class="badge">Ilmiy yondashuv</span>
+    <span class="badge">Sertifikatli</span>
+    <span class="badge">Natijalar</span>
+  </div>
+  <div class="hero-buttons">
+    <a href="https://t.me/hayotbek_abdurafiqov" target="_blank" class="btn-primary-hero">
+      <svg class="icon-md" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Kursga yozilish
+    </a>
+    <a href="tel:+998917499949" class="btn-secondary-hero">
+      <svg class="icon-md" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Bog'lanish
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- BIOGRAPHY -->
+<section class="section">
+<div class="section-header">
+  <div class="accent-bar"></div>
+  <h2>Ustoz haqida</h2>
+</div>
+<div class="card card-padded">
+  <div class="bio-icons">
+    <div class="icon-circle">
+      <svg fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </div>
+    <div class="icon-circle">
+      <svg fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+    </div>
+    <div class="icon-circle">
+      <svg fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+    </div>
+  </div>
+  <p class="short-bio">Matematika va fizika fanlaridan dars beruvchi, ilmiy izlanishlarga asoslangan metodika bilan ishlovchi ustoz.</p>
+  <div class="full-bio-container" id="bio-full">
+    <div class="divider"></div>
+    <p class="full-bio">Abdurafiqov Hayotjon Hislatjon o'g'li 2004-yil 12-yanvarda Toshkent shahri Mirzo Ulug'bek tumanida tug'ilgan.
+
+2010–2021-yillarda Farg'ona viloyati O'zbekiston tumani Qudash qishlog'idagi 3-sonli umumta'lim maktabida tahsil olgan.
+
+2021-yilda Qo'qon davlat universitetining Fizika va astronomiya fakultetiga o'qishga kirib, 2025-yilda muvaffaqiyatli tamomlagan.
+
+Fizika fanidan A+ sertifikat egasi.</p>
+  </div>
+  <button class="expand-btn" onclick="toggleBio()">
+    <span id="bio-btn-text">To'liq o'qish</span>
+    <span class="arrow" id="bio-arrow">▼</span>
+  </button>
+</div>
+</section>
+
+<!-- STATISTICS -->
+<section class="section">
+<div class="section-header">
+  <div class="accent-bar"></div>
+  <h2>Natijalar va statistika</h2>
+  <p>O'quvchilarning yutuqlari</p>
+</div>
+
+<!-- Math Stats -->
+<div class="card">
+  <div class="stat-header" onclick="toggleStat('math')">
+    <div class="stat-header-left">
+      <span class="stat-emoji">📘</span>
+      <div>
+        <div class="stat-name">Matematika</div>
+        <div class="stat-sub">200+ sertifikat</div>
+      </div>
+    </div>
+    <span class="arrow" id="math-arrow">▼</span>
+  </div>
+  <div class="stat-expanded" id="math-expanded">
+    <div class="total-row">
+      <svg class="icon-sm" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      <span class="total-text">Jami: 200 ta o'quvchi</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#1B5E20">A+</div>
+      <div class="bar-track"><div class="bar-fill" data-width="22.5" style="background:#1B5E20"></div></div>
+      <span class="grade-count">45</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#2E7D32">A</div>
+      <div class="bar-track"><div class="bar-fill" data-width="32.5" style="background:#2E7D32"></div></div>
+      <span class="grade-count">65</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#1565C0">B+</div>
+      <div class="bar-track"><div class="bar-fill" data-width="25" style="background:#1565C0"></div></div>
+      <span class="grade-count">50</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#0288D1">B</div>
+      <div class="bar-track"><div class="bar-fill" data-width="20" style="background:#0288D1"></div></div>
+      <span class="grade-count">40</span>
+    </div>
+  </div>
+</div>
+
+<!-- Physics Stats -->
+<div class="card">
+  <div class="stat-header" onclick="toggleStat('physics')">
+    <div class="stat-header-left">
+      <span class="stat-emoji">⚛️</span>
+      <div>
+        <div class="stat-name">Fizika</div>
+        <div class="stat-sub">100+ sertifikat</div>
+      </div>
+    </div>
+    <span class="arrow" id="physics-arrow">▼</span>
+  </div>
+  <div class="stat-expanded" id="physics-expanded">
+    <div class="total-row">
+      <svg class="icon-sm" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      <span class="total-text">Jami: 100 ta o'quvchi</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#1B5E20">A+</div>
+      <div class="bar-track"><div class="bar-fill" data-width="25" style="background:#1B5E20"></div></div>
+      <span class="grade-count">25</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#2E7D32">A</div>
+      <div class="bar-track"><div class="bar-fill" data-width="40" style="background:#2E7D32"></div></div>
+      <span class="grade-count">40</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#1565C0">B+</div>
+      <div class="bar-track"><div class="bar-fill" data-width="15" style="background:#1565C0"></div></div>
+      <span class="grade-count">15</span>
+    </div>
+    <div class="grade-row">
+      <div class="grade-label" style="background:#0288D1">B</div>
+      <div class="bar-track"><div class="bar-fill" data-width="20" style="background:#0288D1"></div></div>
+      <span class="grade-count">20</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- COURSES -->
+<section class="section">
+<div class="section-header">
+  <div class="accent-bar"></div>
+  <h2>Kurslar</h2>
+  <p>Professional tayyorlov dasturlari</p>
+</div>
+
+<div class="card card-padded">
+  <div class="course-top">
+    <span class="course-emoji">📐</span>
+    <div class="course-title">Matematika kursi</div>
+  </div>
+  <div class="feature-row">
+    <svg class="icon-sm" fill="none" stroke="#2E7D32" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span class="feature-text">Sertifikat va imtihonlarga tayyorlov</span>
+  </div>
+  <div class="feature-row">
+    <svg class="icon-sm" fill="none" stroke="#2E7D32" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span class="feature-text">Mantiqiy fikrlashni rivojlantirish</span>
+  </div>
+  <a href="https://t.me/hayotbek_abdurafiqov" target="_blank" class="enroll-btn">
+    <svg class="icon-sm" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    Kursga yozilish
+    <svg class="icon-sm" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+
+<div class="card card-padded">
+  <div class="course-top">
+    <span class="course-emoji">🔬</span>
+    <div class="course-title">Fizika kursi</div>
+  </div>
+  <div class="feature-row">
+    <svg class="icon-sm" fill="none" stroke="#2E7D32" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span class="feature-text">Nazariya + amaliy masalalar</span>
+  </div>
+  <div class="feature-row">
+    <svg class="icon-sm" fill="none" stroke="#2E7D32" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span class="feature-text">A+ darajaga yo'naltirilgan tayyorlov</span>
+  </div>
+  <a href="https://t.me/hayotbek_abdurafiqov" target="_blank" class="enroll-btn">
+    <svg class="icon-sm" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    Kursga yozilish
+    <svg class="icon-sm" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section">
+<div class="section-header">
+  <div class="accent-bar"></div>
+  <h2>Ilmiy maqolalar va nashrlar</h2>
+  <p>Xalqaro jurnallarda chop etilgan</p>
+</div>
+
+<div class="card card-padded" id="article-1">
+  <div class="article-top">
+    <div class="number-badge">1</div>
+    <svg class="icon-md" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  </div>
+  <p class="article-title">Kuchli magnit maydonlar va kvant Hall effektlari – maydon ta'sirida hosil bo'ladigan holatlarning topologik xususiyatlari</p>
+  <a href="https://ilmiyanjumanlar.uz/archive/article/id/8420" target="_blank" class="link-btn">
+    Maqolani ko'rish
+    <svg class="icon-sm" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+  </a>
+</div>
+
+<div class="card card-padded" id="article-2">
+  <div class="article-top">
+    <div class="number-badge">2</div>
+    <svg class="icon-md" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  </div>
+  <p class="article-title">Topological properties of quantum states formed under strong magnetic fields</p>
+  <a href="https://explore.openaire.eu/search/publication?pid=10.5281/zenodo.14162209" target="_blank" class="link-btn">
+    Maqolani ko'rish
+    <svg class="icon-sm" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+  </a>
+</div>
+
+<div class="card card-padded hidden" id="article-3">
+  <div class="article-top">
+    <div class="number-badge">3</div>
+    <svg class="icon-md" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  </div>
+  <p class="article-title">Quantum Hall effects and strong magnetic field interactions</p>
+  <a href="https://internationaljournals.co.in/index.php/giirj/article/view/3191" target="_blank" class="link-btn">
+    Maqolani ko'rish
+    <svg class="icon-sm" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+  </a>
+</div>
+
+<div class="card card-padded hidden" id="article-4">
+  <div class="article-top">
+    <div class="number-badge">4</div>
+    <svg class="icon-md" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  </div>
+  <p class="article-title">Strong magnetic field influence on quantum systems</p>
+  <a href="https://zenodo.org/records/14167621" target="_blank" class="link-btn">
+    Maqolani ko'rish
+    <svg class="icon-sm" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+  </a>
+</div>
+
+<div class="card card-padded hidden" id="article-5">
+  <div class="article-top">
+    <div class="number-badge">5</div>
+    <svg class="icon-md" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  </div>
+  <p class="article-title">Methodology of discussion of fundamental features of elementary particles in pedagogy</p>
+  <a href="https://www.neliti.com/publications/600013/methodology-of-discussion-of-fundamental-features-of-elementary-partics-in-pedag" target="_blank" class="link-btn">
+    Maqolani ko'rish
+    <svg class="icon-sm" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+  </a>
+</div>
+
+<button class="show-more-btn" id="articles-toggle" onclick="toggleArticles()">
+  <span id="articles-btn-text">Yana 3 ta maqola</span>
+  <span class="arrow" id="articles-arrow">▼</span>
+</button>
+</section>
+
+<!-- MATH BOOKS -->
+<section class="section">
+<div class="section-header">
+  <div class="accent-bar"></div>
+  <h2>Tavsiya etilgan adabiyotlar</h2>
+  <p>📘 Matematika</p>
+</div>
+<div class="card" style="padding:4px">
+  <div class="book-item">
+    <div class="book-icon">
+      <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <span class="book-title">IDC Mathematics (asosiy qo'llanma)</span>
+  </div>
+  <div class="book-item">
+    <div class="book-icon">
+      <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <span class="book-title">IDC Mathematics – 1-qism</span>
+  </div>
+  <div class="book-item">
+    <div class="book-icon">
+      <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <span class="book-title">IDC Mathematics – 2-qism</span>
+  </div>
+  <div class="book-item hidden" id="math-book-4">
+    <div class="book-icon">
+      <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <span class="book-title">IDC Mathematics – 3-qism</span>
+  </div>
+  <div class="book-item hidden" id="math-book-5">
+    <div class="book-icon">
+      <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <span class="book-title">IDC Mathematics – 4-qism</span>
+  </div>
+  <div class="book-item hidden" id="math-book-6">
+    <div class="book-icon">
+      <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <span class="book-title">IDC Mathematics – 5-qism</span>
+  </div>
+  <button class="books-expand-btn" id="math-books-toggle" onclick="toggleMathBooks()">
+    <span id="math-books-btn-text">Yana 3 ta kitob</span>
+    <span class="arrow" id="math-books-arrow">▼</span>
+  </button>
+</div>
+</section>
+
+<!-- PHYSICS BOOKS -->
+<section class="section">
+<div class="section-header">
+  <div class="accent-bar"></div>
+  <h2>Fizika fanidan qo'llanmalar</h2>
+  <p>Tavsiya etilgan adabiyotlar</p>
+</div>
+
+<!-- Masala ishlash uchun -->
+<div class="card">
+  <div class="phys-header" onclick="togglePhysCat('problems')">
+    <div class="phys-header-left">
+      <div class="phys-icon-wrap phys-icon-calc">
+        <svg width="20" height="20" fill="none" stroke="#E65100" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+      </div>
+      <div class="phys-header-text">
+        <span class="phys-cat-emoji">🔢</span>
+        <span class="phys-cat-title">Masala ishlash uchun</span>
+      </div>
+    </div>
+    <span class="arrow" id="problems-arrow">▼</span>
+  </div>
+  <div class="phys-books-list" id="problems-list">
+    <div class="phys-book-item">
+      <div class="phys-dot"></div>
+      <div>
+        <div class="phys-book-title">Sardor Berdiyev – INNOVA</div>
+        <div class="phys-book-desc">Masala yechish va chuqur tayyorlov uchun</div>
+      </div>
+    </div>
+    <div class="phys-book-item">
+      <div class="phys-dot"></div>
+      <div>
+        <div class="phys-book-title">Abduraim Uzoqov – Fizikadan masalalar to'plami</div>
+        <div class="phys-book-desc">Amaliy masalalar va imtihon tayyorlovi</div>
+      </div>
+    </div>
+    <div class="phys-book-item" style="border-bottom:none">
+      <div class="phys-dot"></div>
+      <div>
+        <div class="phys-book-title">Maxsus testlar</div>
+        <div class="phys-book-desc">Yangilangan Mock testlar</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- O'qish uchun -->
+<div class="card">
+  <div class="phys-header" onclick="togglePhysCat('theory')">
+    <div class="phys-header-left">
+      <div class="phys-icon-wrap phys-icon-book">
+        <svg width="20" height="20" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
+      <div class="phys-header-text">
+        <span class="phys-cat-emoji">📖</span>
+        <span class="phys-cat-title">O'qish uchun (Nazariy adabiyotlar)</span>
+      </div>
+    </div>
+    <span class="arrow" id="theory-arrow">▼</span>
+  </div>
+  <div class="phys-books-list" id="theory-list">
+    <div class="phys-book-item">
+      <div class="phys-dot"></div>
+      <div>
+        <div class="phys-book-title">M.B. Dustmurotov – Molekulyar fizika</div>
+      </div>
+    </div>
+    <div class="phys-book-item" style="border-bottom:none">
+      <div class="phys-dot"></div>
+      <div>
+        <div class="phys-book-title">O'lmasova M. – Fizika qo'llanmalari (3 bo'lim)</div>
+        <div class="part-row"><div class="part-bullet"></div><span class="part-text">Mexanik fizika</span></div>
+        <div class="part-row"><div class="part-bullet"></div><span class="part-text">Elektromagnitizm</span></div>
+        <div class="part-row"><div class="part-bullet"></div><span class="part-text">Optika va atom fizikasi</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="section">
+<div class="section-header">
+  <div class="accent-bar"></div>
+  <h2>Sertifikatlar</h2>
+  <p>O'quvchilarning rasmiy natijalari</p>
+</div>
+
+<!-- Math Certs -->
+<div class="card">
+  <div class="cert-header" onclick="toggleCert('math-cert')">
+    <div class="cert-header-left">
+      <span class="cert-emoji">📘</span>
+      <div>
+        <div class="cert-group-title">Matematika sertifikatlari</div>
+        <div class="cert-group-sub">200 ta sertifikat</div>
+      </div>
+    </div>
+    <span class="arrow" id="math-cert-arrow">▼</span>
+  </div>
+  <div class="cert-grades" id="math-cert-grades">
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#1B5E20">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#1B5E20">A+</span>
+          </div>
+          <div class="cert-grade-count">45 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#1B5E20" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#2E7D32">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#2E7D32">A</span>
+          </div>
+          <div class="cert-grade-count">65 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#2E7D32" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#1565C0">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#1565C0">B+</span>
+          </div>
+          <div class="cert-grade-count">50 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#0288D1">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#0288D1">B</span>
+          </div>
+          <div class="cert-grade-count">40 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#0288D1" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- Physics Certs -->
+<div class="card">
+  <div class="cert-header" onclick="toggleCert('phys-cert')">
+    <div class="cert-header-left">
+      <span class="cert-emoji">⚛️</span>
+      <div>
+        <div class="cert-group-title">Fizika sertifikatlari</div>
+        <div class="cert-group-sub">100 ta sertifikat</div>
+      </div>
+    </div>
+    <span class="arrow" id="phys-cert-arrow">▼</span>
+  </div>
+  <div class="cert-grades" id="phys-cert-grades">
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#1B5E20">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#1B5E20">A+</span>
+          </div>
+          <div class="cert-grade-count">25 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#1B5E20" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#2E7D32">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#2E7D32">A</span>
+          </div>
+          <div class="cert-grade-count">40 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#2E7D32" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#1565C0">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#1565C0">B+</span>
+          </div>
+          <div class="cert-grade-count">15 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="cert-grade-card">
+      <div class="cert-grade-left">
+        <div class="cert-grade-badge" style="background:#0288D1">
+          <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div>
+          <div class="cert-grade-row">
+            <span class="cert-grade-label-text">Natija: </span>
+            <span class="inline-tag" style="background:#0288D1">B</span>
+          </div>
+          <div class="cert-grade-count">20 ta o'quvchi</div>
+        </div>
+      </div>
+      <svg width="16" height="16" fill="none" stroke="#0288D1" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+
+    <!-- Certificate Photos -->
+    <div class="photos-section">
+      <div class="photos-title">Sertifikat namunalari</div>
+
+      <div class="photo-card">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/gyp9hnreyuht1go402ft2" alt="Abdurafiqov Hayotjon">
+        <div class="photo-info">
+          <div class="cert-name">Abdurafiqov Hayotjon</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#1B5E20">A+</span>
+            <span class="cert-score">78.68 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/epg1ytj4nnyfgobvihfhq" alt="Shomurodov Azizbek">
+        <div class="photo-info">
+          <div class="cert-name">Shomurodov Azizbek</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#1B5E20">A+</span>
+            <span class="cert-score">71.53 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/rm71ccfo1eyiw8xcw50v7" alt="Boqiyev Xabibullo">
+        <div class="photo-info">
+          <div class="cert-name">Boqiyev Xabibullo</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#2E7D32">A</span>
+            <span class="cert-score">67.02 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/8rrrx0kl9uofy02a0pj3h" alt="Daminov Nodirbek">
+        <div class="photo-info">
+          <div class="cert-name">Daminov Nodirbek</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#2E7D32">A</span>
+            <span class="cert-score">67.42 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-5">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/a0ls9xcj0cz1oz7bjmspr" alt="Yo'ldosheva Lobar">
+        <div class="photo-info">
+          <div class="cert-name">Yo'ldosheva Lobar</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#2E7D32">A</span>
+            <span class="cert-score">66.43 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-6">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/jyp1zlmosehttxwrgqhib" alt="Sirojiddinov Ubaydulloh">
+        <div class="photo-info">
+          <div class="cert-name">Sirojiddinov Ubaydulloh</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#1565C0">B+</span>
+            <span class="cert-score">63.06 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-7">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/9m3urqscu01z2aii9ogxt" alt="Saidov Sharofiddin">
+        <div class="photo-info">
+          <div class="cert-name">Saidov Sharofiddin</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#1565C0">B+</span>
+            <span class="cert-score">61.43 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-8">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/bylnnv5blasdfmnapob6u" alt="Yoqubova Bibishxon">
+        <div class="photo-info">
+          <div class="cert-name">Yoqubova Bibishxon</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#0288D1">B</span>
+            <span class="cert-score">59.21 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-9">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/8qjgu2k6fjiis2tx39elj" alt="Rahmatjonova Shahzodaxon">
+        <div class="photo-info">
+          <div class="cert-name">Rahmatjonova Shahzodaxon</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#0288D1">B</span>
+            <span class="cert-score">57.44 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-10">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/g7t6uej81d4qtax0ysdp5" alt="Nizomiddinova Layloxon">
+        <div class="photo-info">
+          <div class="cert-name">Nizomiddinova Layloxon</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#0288D1">B</span>
+            <span class="cert-score">55.73 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-11">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/tpuzfrdj06xudnzyivbwr" alt="Reyimberdiyev Rasulbek">
+        <div class="photo-info">
+          <div class="cert-name">Reyimberdiyev Rasulbek</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#E65100">C+</span>
+            <span class="cert-score">51.42 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card hidden" id="cert-photo-12">
+        <img class="cert-image" src="https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/4uxxvnzppfz9l44hvtmv7" alt="Hamdamova Dilnozaxon">
+        <div class="photo-info">
+          <div class="cert-name">Hamdamova Dilnozaxon</div>
+          <div class="cert-meta">
+            <span class="grade-tag" style="background:#E65100">C+</span>
+            <span class="cert-score">53.11 ball</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="show-more-photos" id="cert-photos-toggle" onclick="toggleCertPhotos()">
+        <span id="cert-photos-btn-text">Yana 8 ta sertifikat</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Telegram CTA -->
+<div class="telegram-cta">
+  <p class="telegram-cta-text">Ko'proq sertifikatlarni ko'rish uchun telegram sahifamizga tashrif buyuring</p>
+  <a href="https://t.me/physicsolympiad_qdpi" target="_blank" class="telegram-cta-btn">
+    <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    Telegram sahifaga o'tish
+  </a>
+</div>
+</section>
+
+<!-- TELEGRAM SECTION -->
+<section class="section">
+<div class="telegram-card">
+  <div class="tg-icon-bg">
+    <svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+  </div>
+  <div class="tg-title">Telegram kanal</div>
+  <div class="tg-channel">Physics Olympiad QDPI</div>
+  <p class="tg-desc">Fizika olimpiada materiallari, yangiliklar va foydali resurslar</p>
+  <a href="https://t.me/physicsolympiad_qdpi" target="_blank" class="tg-btn">
+    <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    Telegram kanalga o'tish
+    <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+<div class="contact-gradient">
+  <div class="contact-title">Bog'lanish</div>
+  <p class="contact-subtitle">Kursga yozilish yoki savollaringiz bo'lsa, biz bilan bog'laning</p>
+  <div class="contact-list">
+    <a href="tel:+998917499949" class="contact-item">
+      <div class="contact-icon-box">
+        <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      +998 91 749 99 49
+    </a>
+    <a href="tel:+998917494999" class="contact-item">
+      <div class="contact-icon-box">
+        <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      +998 91 749 49 99
+    </a>
+    <a href="https://t.me/hayotbek_abdurafiqov" target="_blank" class="contact-item">
+      <div class="contact-icon-box">
+        <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </div>
+      @hayotbek_abdurafiqov
+    </a>
+    <a href="https://instagram.com/teacher_hayotjon" target="_blank" class="contact-item">
+      <div class="contact-icon-box">
+        <svg width="18" height="18" fill="none" stroke="#1565C0" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </div>
+      teacher_hayotjon
+    </a>
+  </div>
+  <div class="contact-buttons">
+    <a href="https://t.me/hayotbek_abdurafiqov" target="_blank" class="btn-contact-primary">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Bog'lanish
+    </a>
+    <a href="https://t.me/hayotbek_abdurafiqov" target="_blank" class="btn-contact-secondary">
+      <svg width="18" height="18" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      Kursga yozilish
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="footer-divider"></div>
+<div class="footer-copyright">© 2025 Abdurafiqov Hayotjon</div>
+<div class="footer-sub">Matematika va Fizika fanlari bo'yicha professional ustoz</div>
+</footer>
+
+<script>
+// Biography toggle
+let bioExpanded = false;
+function toggleBio() {
+  bioExpanded = !bioExpanded;
+  document.getElementById('bio-full').classList.toggle('active');
+  document.getElementById('bio-btn-text').textContent = bioExpanded ? 'Yopish' : "To'liq o'qish";
+  document.getElementById('bio-arrow').classList.toggle('rotated');
+}
+
+// Statistics toggle
+const statStates = {};
+function toggleStat(id) {
+  statStates[id] = !statStates[id];
+  const expanded = document.getElementById(id + '-expanded');
+  expanded.classList.toggle('active');
+  document.getElementById(id + '-arrow').classList.toggle('rotated');
+  if (statStates[id]) {
+    setTimeout(() => {
+      expanded.querySelectorAll('.bar-fill').forEach((bar, i) => {
+        setTimeout(() => {
+          bar.style.width = bar.dataset.width + '%';
+        }, i * 150);
+      });
+    }, 50);
+  } else {
+    expanded.querySelectorAll('.bar-fill').forEach(bar => {
+      bar.style.width = '0';
+    });
+  }
+}
+
+// Articles toggle
+let articlesExpanded = false;
+function toggleArticles() {
+  articlesExpanded = !articlesExpanded;
+  ['article-3', 'article-4', 'article-5'].forEach(id => {
+    document.getElementById(id).classList.toggle('hidden');
+  });
+  document.getElementById('articles-btn-text').textContent = articlesExpanded ? "Kamroq ko'rsatish" : 'Yana 3 ta maqola';
+  document.getElementById('articles-arrow').classList.toggle('rotated');
+}
+
+// Math books toggle
+let mathBooksExpanded = false;
+function toggleMathBooks() {
+  mathBooksExpanded = !mathBooksExpanded;
+  ['math-book-4', 'math-book-5', 'math-book-6'].forEach(id => {
+    document.getElementById(id).classList.toggle('hidden');
+  });
+  document.getElementById('math-books-btn-text').textContent = mathBooksExpanded ? 'Kamroq' : 'Yana 3 ta kitob';
+  document.getElementById('math-books-arrow').classList.toggle('rotated');
+}
+
+// Physics books categories toggle
+const physCatStates = {};
+function togglePhysCat(id) {
+  physCatStates[id] = !physCatStates[id];
+  document.getElementById(id + '-list').classList.toggle('active');
+  document.getElementById(id + '-arrow').classList.toggle('rotated');
+}
+
+// Certificates toggle
+const certStates = {};
+function toggleCert(id) {
+  certStates[id] = !certStates[id];
+  document.getElementById(id + '-grades').classList.toggle('active');
+  document.getElementById(id + '-arrow').classList.toggle('rotated');
+}
+
+// Certificate photos toggle
+let certPhotosExpanded = false;
+function toggleCertPhotos() {
+  certPhotosExpanded = !certPhotosExpanded;
+  for (let i = 5; i <= 12; i++) {
+    document.getElementById('cert-photo-' + i).classList.toggle('hidden');
+  }
+  document.getElementById('cert-photos-btn-text').textContent = certPhotosExpanded ? 'Kamroq' : 'Yana 8 ta sertifikat';
+}
+</script>
+
+</body>
+</html>
